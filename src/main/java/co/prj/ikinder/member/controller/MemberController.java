@@ -23,9 +23,19 @@ public class MemberController {
 		return "member/find_password";
 	}
 	
-	//회원가입 폼
+	//회원가입 메인
 	@GetMapping("/join.do")
 	public String join() {
 		return "member/join";
 	}
+	
+	
+	//기관 회원가입 폼
+	@GetMapping("/join_institute.do")
+	public String join_institute() {
+		return "member/join_institute";
+	}
+	
+	
+	
 }

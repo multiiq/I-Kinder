@@ -27,7 +27,7 @@
             
           </div>
           <a href="login.do" class=" btn btn-dark py-2" style="font-size: 1.0rem;">로그인<i class="fas fa-arrow-alt-to-right"></i></a>
-          <a href="login.html" class="ms-4 btn btn-outline-primary py-2" style="font-size: 1.0rem;">회원가입<i class="fa fa-arrow-right ms-3"></i></a>
+          <a href="join.do" class="ms-4 btn btn-outline-primary py-2" style="font-size: 1.0rem;">회원가입<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
       </nav>
     <!-- Navbar End -->
