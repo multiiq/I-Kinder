@@ -76,82 +76,118 @@
                 </div>
             </div>
             <!--이용약관 끝-->
-            <!--기관정보 입력-->
-            <div id="form-2" class="row g-4 display-none">
-                
-                
-                <div class="col-lg-12 col-md-12 " data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-md-6">
-                                <div class="d-flex justify-content-center mb-5">
-                                  <button type="button" class="col-sm-6 btn btn-dark py-3 px-5 mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">기관 찾기</button>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="ins_name"  readonly>
-                                    <label for="ins_name">기관명</label>
-                                    
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control rounded-2" id="ins_addr" readonly>
-                                    <label for="ins_addr">기관주소</label>
-                                </div>
-                               
-                                
-                            </div>
-                        
-                            
-                           
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!--기관정보 끝-->
-
-
-            <!--기관 모달창-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="tab-2" class="tab-content">
-                            <select id="combineSidoList" class="combineSidoList" name="combineSidoCode" onchange="citySelect(this.value);" title="시/도">
-                                <option value="99">전체 시/도</option>
-                                <option value="11">서울특별시</option>
-                                <option value="26">부산광역시</option>
-                                <option value="27">대구광역시</option>
-                                <option value="28">인천광역시</option>
-                                <option value="29">광주광역시</option>
-                                <option value="30">대전광역시</option>
-                                <option value="31">울산광역시</option>
-                                <option value="36">세종특별자치시</option>
-                                <option value="41">경기도</option>
-                                <option value="42">강원도</option>
-                                <option value="43">충청북도</option>
-                                <option value="44">충청남도</option>
-                                <option value="45">전라북도</option>
-                                <option value="46">전라남도</option>
-                                <option value="47">경상북도</option>
-                                <option value="48">경상남도</option>
-                                <option value="50">제주특별자치도</option>
-                            </select>
-                            <select id="city" name="city"><option value="">전체</option></select> 
-                            <label for="stx" class="sound_only">검색어</label> <input type="text" name="stx2" id="stx2"  onkeyup="enterkey('childschool')">
-                            <button class="btn02" >검색</button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--기관 모달창 끝-->
+            
+             <!--기관정보 입력-->
+		    <div id="form-2" class="row g-4 display-none">
+		                
+		                
+		     <div class="col-lg-12 col-md-12 " data-wow-delay="0.5s">
+		        <form>
+		            <div class="row g-3 justify-content-center">
+		                <div class="col-md-6">
+		                    <div class="d-flex justify-content-center mb-5">
+		                      <button type="button" class="col-sm-6 btn btn-dark py-3 px-5 mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">기관 찾기</button>
+		                    </div>
+		                    <div class="form-floating mb-3">
+		                        <input type="text" class="form-control" id="ins_name"  readonly>
+		                        <label for="ins_name">기관명</label>
+		                        
+		                    </div>
+		                    <div class="form-floating mb-3">
+		                        <input type="text" class="form-control rounded-2" id="ins_addr" readonly>
+		                        <label for="ins_addr">기관주소</label>
+		                    </div>
+		                   
+		                    
+		                </div>
+		            
+		                
+		               
+		            </div>
+		        </form>
+		     </div>
+		 </div>
+		<!--기관정보 끝-->
+		
+		<!--기관 모달창-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-xl">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h5 class="modal-title" id="exampleModalLabel">기관 검색</h5>
+		          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		        </div>
+		        <div class="modal-body">
+		            <div id="tab-2" class="tab-content d-flex align-items-center">
+		                <div>
+		                    <select class="form-select me-2" id="sidoList" class="combineSidoList" name="combineSidoCode" onchange="citySelect(this.value,1);" title="시/도" style="width: 25rem;">
+		                        <option value="">전체 시/도</option>
+		                        <option value="11">서울특별시</option>
+		                        <option value="26">부산광역시</option>
+		                        <option value="27">대구광역시</option>
+		                        <option value="28">인천광역시</option>
+		                        <option value="29">광주광역시</option>
+		                        <option value="30">대전광역시</option>
+		                        <option value="31">울산광역시</option>
+		                        <option value="36">세종특별자치시</option>
+		                        <option value="41">경기도</option>
+		                        <option value="42">강원도</option>
+		                        <option value="43">충청북도</option>
+		                        <option value="44">충청남도</option>
+		                        <option value="45">전라북도</option>
+		                        <option value="46">전라남도</option>
+		                        <option value="47">경상북도</option>
+		                        <option value="48">경상남도</option>
+		                        <option value="50">제주특별자치도</option>
+		                    </select>
+                        </div>    
+		               
+		                
+		                    <select class="form-select me-2" id="city" class="px-3 py-2 me-3"  name="city" style="width: 20rem;"><option value="">전체</option></select>
+		                    <input type="text"  class="form-control" name="stx2" id="schoolName" placeholder="기관명" onkeyup="enterkey('childschool')">
+		                
+		                   <button id="searchBtn" class="btn btn-secondary ms-4" style="width: 10rem;">검색</button>
+		                
+		            </div>
+                    
+		
+		
+		            <div>
+		                <table class="table table-hover text-center mt-5">
+		                    <thead class="table-light">
+		                        <tr>
+		                            <th><input type="checkbox" onclick="selectAll(this)"></th>
+		                            <th>기관명</th>
+		                            <th>주소</th>
+		                            
+		                         </tr>
+		                     </thead>
+		                     <tbody>
+		                         <tr>
+		                            <td><input type="checkbox" name="notice"></td>
+		                            <td>100</td>
+		                            <td>아이킨더 공지사항입니다</td>
+		                            
+		                         </tr>
+		                         <tr>
+		                            <td><input type="checkbox" name="notice"></td>
+		                            <td>100</td>
+		                            <td>아이킨더 공지사항입니다</td>
+		                            
+		                         </tr>
+		                      </tbody>
+		
+		                </table>
+		            </div>
+		        </div>
+		        <div class="modal-footer">
+		         
+		          <button type="button" class="btn btn-primary">등록</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <!--기관 모달창 끝-->
 
 
             <!--개인정보 입력-->
@@ -202,6 +238,8 @@
                 </div>
             </div>
             <!--개인정보 끝-->
+            
+            
             <div class="row  mt-5">
               <div class="col-6 d-flex justify-content-center">
                 <button id="previousBtn" class="col-sm-6 btn btn-light py-3 px-5 mt-2" >이전</button>
@@ -215,5 +253,46 @@
         </div>
     </div>
     
-    
+    <!--회원가입 시 다음 div 전환-->
     <script src="resources/main/js/main/join_institute.js"></script>
+    
+    <!--시/도 select 될 때 구 option-->
+    <script src="resources/main/js/main/select_city.js"></script>
+    
+     <script>
+     
+
+    const searchBtn=document.querySelector("#searchBtn");
+
+    searchBtn.addEventListener("click",()=>{
+        
+        const selectSido=document.querySelector("#sidoList");
+        const selectCity = document.querySelector("#city");
+        const schoolName = document.querySelector("#schoolName");
+
+        const sido = selectSido.options[selectSido.selectedIndex].value;
+        const city = selectCity.options[selectCity.selectedIndex].value;
+
+        if(sido==""&&city==""){
+            alert("시/도를 선택해주세요")
+
+        }else{
+            $.ajax({
+                url:"ajaxGetchildSchool.do",
+                type:"post",
+                data:{'sido':sido,'city':city}
+    
+            })
+            .done(function(result){
+                console.log(result)
+            })
+            .fail(function(){
+                alert("관리자에게 연락해주세요")
+            })
+
+        }
+
+
+    })
+ </script>
+   

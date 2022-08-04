@@ -118,14 +118,7 @@
         joinBtn.addEventListener("click", handleJoinForm);
 
 
-        //기관명 시도
-        const citySelect=(sidoCode)=>{
-            $("#city").empty();
-            if(sidoCode=='11'){
-                for(const value in seoul){
-                    console.log(seoul[0][seoul]);
-                }
-            }
+        
 
 
-        }
+        
