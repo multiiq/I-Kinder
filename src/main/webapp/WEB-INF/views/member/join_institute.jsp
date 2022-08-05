@@ -118,9 +118,9 @@
 		          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		        </div>
 		        <div class="modal-body">
-		            <div id="tab-2" class="tab-content d-flex align-items-center">
-		                <div>
-		                    <select class="form-select me-2" id="sidoList" class="combineSidoList" name="combineSidoCode" onchange="citySelect(this.value,1);" title="시/도" style="width: 25rem;">
+		            <div id="tab-2" class="tab-content row g-4">
+		                <div  class="col-lg-2">
+		                    <select class="form-select" id="sidoList" class="combineSidoList" name="combineSidoCode" onchange="citySelect(this.value,1);" title="시/도">
 		                        <option value="">전체 시/도</option>
 		                        <option value="11">서울특별시</option>
 		                        <option value="26">부산광역시</option>
@@ -140,16 +140,22 @@
 		                        <option value="48">경상남도</option>
 		                        <option value="50">제주특별자치도</option>
 		                    </select>
-                        </div>    
-		               
-		                
-		                    <select class="form-select me-2" id="city" class="px-3 py-2 me-3"  name="city" style="width: 20rem;"><option value="">전체</option></select>
-		                    <input type="text"  class="form-control" name="stx2" id="schoolName" placeholder="기관명" onkeyup="enterkey('childschool')">
-		                
+		                    <p id="sido-msg" class="mt-1 text-danger ms-2" style="display: none;">시/도를 선택해주세요</p>
+		                </div>
+		                <div class="col-lg-2">
+		                    <select class="form-select me-2" id="city" class="px-3 py-2 me-3"  name="city" ><option value="">전체</option></select>
+		                    <p id="city-msg" class="mt-1 text-danger ms-2" style="display: none;">지역을 선택해주세요</p>
+		                </div>
+		                <div class="col-lg-5">
+		                    <input type="text"  class="form-control" name="stx2" id="schoolName" placeholder="기관명" >
+		                    <p id="search-msg" class="mt-1 text-danger ms-2" style="display: none;">검색어를 입력해주세요</p>
+		                </div>
+		                <div class="col-lg-3">
 		                   <button id="searchBtn" class="btn btn-secondary ms-4" style="width: 10rem;">검색</button>
-		                
+		                   <p class="mt-1"></p>
+		                </div>
 		            </div>
-                    
+		           
 		
 		
 		            <div>
@@ -188,7 +194,6 @@
 		    </div>
 		  </div>
 		  <!--기관 모달창 끝-->
-
 
             <!--개인정보 입력-->
             <div id="form-3" class="row g-4 display-none"> 
@@ -270,21 +275,52 @@
         const selectCity = document.querySelector("#city");
         const schoolName = document.querySelector("#schoolName");
 
-        const sido = selectSido.options[selectSido.selectedIndex].value;
-        const city = selectCity.options[selectCity.selectedIndex].value;
+        const sidoVal = selectSido.options[selectSido.selectedIndex].value;
+        const cityVal = selectCity.options[selectCity.selectedIndex].value;
+        const schoolNameVal = schoolName.value;
+        
+        const sidoMsg = document.querySelector("#sido-msg");
+        const cityMsg = document.querySelector("#city-msg");
+        const searchMsg = document.querySelector("#search-msg");
 
-        if(sido==""&&city==""){
-            alert("시/도를 선택해주세요")
+        if(sidoVal==""&&cityVal==""){
+            sidoMsg.style.display="block";
+            cityMsg.style.display="block";
+            
+            
+        }else if(cityVal==""){
+            sidoMsg.style.display="none";
+            cityMsg.style.display="block";
+            searchMsg.style.display="none";
 
+        }else if(schoolNameVal==""){
+            sidoMsg.style.display="none";
+            cityMsg.style.display="none";
+            searchMsg.style.display="block";
         }else{
             $.ajax({
                 url:"ajaxGetchildSchool.do",
                 type:"post",
-                data:{'sido':sido,'city':city}
+                data:{'sido':sidoVal,'city':cityVal,'schoolName':schoolNameVal}
     
             })
             .done(function(result){
-                console.log(result)
+               const kinderInfoList = JSON.parse(result);
+               
+               let kinderInfo=[];
+               for(const i in kinderInfoList){
+            	   kinderInfo.push({kindername:kinderInfoList[i]["kindername"],addr:kinderInfoList[i]["addr"]})
+            	   console.log(kinderInfoList[i]["kindername"].indexOf("유")>-1);
+               }
+               
+               const asArray = Object.entries(kinderInfo);
+               console.log(asArray);
+               const filtered = asArray.filter(([key,value])=> value.indexOf(schoolNameVal)>-1)
+               const justStrings= Object.fromEntries(filtered);
+
+
+			   console.log(justStrings);
+               
             })
             .fail(function(){
                 alert("관리자에게 연락해주세요")

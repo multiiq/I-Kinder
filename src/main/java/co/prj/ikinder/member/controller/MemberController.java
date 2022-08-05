@@ -1,13 +1,16 @@
 package co.prj.ikinder.member.controller;
 
 
+
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -52,8 +55,8 @@ public class MemberController {
 	// 기관 찾기 - 시도 select ajax
 	@ResponseBody
 	@RequestMapping(value="/ajaxGetchildSchool.do", produces="application/text;charset=utf8")
-	public String ajaxGetCity(@RequestParam("sido")String sido,@RequestParam("city")String city) throws Exception{
-		System.out.println(city);
+	public String ajaxGetCity(@RequestParam("sido")String sido,@RequestParam("city")String city,@RequestParam("schoolName")String name) throws Exception{
+		
 		
 		String url="https://e-childschoolinfo.moe.go.kr/api/notice/basicInfo2.do?";
 		String apiKey = "key=511f4f222c0d48c7bdb3660d4af7840b";
@@ -63,11 +66,18 @@ public class MemberController {
 		String jsonString = restTemplate.getForObject(url+apiKey+param, String.class);
 		
 		
-//		ObjectMapper mapper = new ObjectMapper();
-//		Map<String,String> map = mapper.readValue(jsonString, Map.class);
+		ObjectMapper mapper = new ObjectMapper();
+		Map<String,String> map = mapper.readValue(jsonString, Map.class);
+		Map<String, Object> mapObj = new HashMap<String, Object>(map);
+		
+		List<String> list = (List<String>) mapObj.get("kinderInfo");
+		String kinderInfoList = mapper.writeValueAsString(list);
+		
+		System.out.println(kinderInfoList);
 		
 		
-		return jsonString;
+		
+		return kinderInfoList;
 	
 	}
 	
