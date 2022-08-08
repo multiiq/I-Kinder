@@ -15,8 +15,8 @@
         </button>
         <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
           <div class="navbar-nav ms-auto me-auto">
-            <a href="introduce_ikinder.do" class="nav-item nav-link" style="font-size: 1.2rem; color: black;">I-Kinder란?</a>   
-            <a href="service.html" class="nav-item nav-link active" style="font-size: 1.2rem; color: black;">검사</a>
+            <a href="introduce_ikinder.do" class="nav-item nav-link me-5" style="font-size: 1.2rem; color: black;">I-Kinder란?</a>   
+            <a href="multitest.do" class="nav-item nav-link active me-5" style="font-size: 1.2rem; color: black;">검사</a>
             <div class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 1.2rem; color: black;">고객지원</a>
               <div class="dropdown-menu rounded-0 rounded-bottom m-0">

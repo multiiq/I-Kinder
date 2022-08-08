@@ -32,10 +32,16 @@ public class MemberController {
 		return "member/find_id";
 	}
 	
+	//아이디 찾기-확인
+	@GetMapping("/check_id.do")
+	public String check_id() {
+		return "member/check_id";
+	}
+	
 	//비밀번호 찾기
-	@GetMapping("/find_password.do")
+	@GetMapping("/find_pw.do")
 	public String find_password() {
-		return "member/find_password";
+		return "member/find_pw";
 	}
 	
 	//회원가입 메인
