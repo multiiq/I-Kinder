@@ -44,6 +44,7 @@
 .radius-65{
     border-radius:65px;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: var(--primary);
@@ -317,6 +318,31 @@
     transition: .5s;
 }
 
+.item-border-hover{
+  border-radius: 10px;
+  border:2px solid #c9c5c5;
+  transition: .5s;
+  cursor: pointer;
+  
+}
+.item-border-hover:hover{
+    transform: translateY(-20px);
+}
+.item-border-hover{
+    transition: .5s;
+}
+
+.item-hover{
+    transition: .5s;
+    cursor: pointer;
+    
+  }
+  .item-hover:hover{
+      transform: translateY(-20px);
+  }
+  .item-hover{
+      transition: .5s;
+  }
 
 
 

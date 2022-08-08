@@ -38,10 +38,10 @@
                                 </div>
                                 <div class="row text-center my-4">
                                     <div class="col-6">
-                                        <a href="findId.html">아이디 찾기</a>
+                                        <a href="find_id.do">아이디 찾기</a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="newPw.html">비밀번호 찾기</a>
+                                        <a href="find_password.do">비밀번호 찾기</a>
                                     </div>
                                 </div>
                                 <div class="mt-5">
