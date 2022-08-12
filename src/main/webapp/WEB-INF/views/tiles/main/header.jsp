@@ -17,6 +17,7 @@
           <div class="navbar-nav ms-auto me-auto">
             <a href="introduce_ikinder.do" class="nav-item nav-link me-5" style="font-size: 1.2rem; color: black;">I-Kinder란?</a>   
             <a href="multitest.do" class="nav-item nav-link active me-5" style="font-size: 1.2rem; color: black;">검사</a>
+            <a href="data_archvie.do" class="nav-item nav-link active me-5" style="font-size: 1.2rem; color: black;">학습자료실</a>
             <div class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 1.2rem; color: black;">고객지원</a>
               <div class="dropdown-menu rounded-0 rounded-bottom m-0">
@@ -27,7 +28,8 @@
             
           </div>
           <a href="login.do" class=" btn btn-dark py-2" style="font-size: 1.0rem;">로그인<i class="fas fa-arrow-alt-to-right"></i></a>
-          <a href="join.do" class="ms-4 btn btn-outline-primary py-2" style="font-size: 1.0rem;">회원가입<i class="fa fa-arrow-right ms-3"></i></a>
+          <a href="join_institute.do" class="ms-4 btn btn-outline-primary py-2" style="font-size: 1.0rem;">회원가입<i class="fa fa-arrow-right ms-3"></i></a>
+          <a href="mypage.do" class="ms-4  py-2" style="font-size: 1.0rem;">마이페이지<i class="far fa-user-circle ms-2"></i></a>
         </div>
       </nav>
     <!-- Navbar End -->

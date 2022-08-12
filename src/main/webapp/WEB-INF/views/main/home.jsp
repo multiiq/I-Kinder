@@ -66,7 +66,7 @@
                   </p>
                   <p style="float: right;" class="mt-5">
                     <strong style="font-size: 2.5rem;">I-Kinder</strong>는,<br>
-                    <span style="font-size:1.6rem">지능을 뜻하는 Intelligence의 이니셜 ‘I’ 와 아이들과 유치원(kindergarden)을 뜻하는
+                    <span style="font-size:1.6rem">지능을 뜻하는 Intelligence의 이니셜 ‘I’ 와 아이들과 유치원(kindergarten)을 뜻하는
                         Kinder의 합성어입니다.</span><br>
                     <span style="font-size:1.6rem">I-Kinder 는 아이들의 <strong>지적능력의 발달을 위한 통합교육 프로그램</strong>입니다.</span>
                   </p>
