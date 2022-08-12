@@ -88,5 +88,51 @@ public class MemberController {
 	}
 	
 	
+	//----마이페이지 시작 ----
+	
+	@GetMapping("/mypage.do")
+	public String mypage() {
+		return "member/mypage";
+	}
+	
+	//교사관리
+	@GetMapping("/manage_teacher.do")
+	public String manage_teacher() {
+		return "member/manage_teacher";
+	}
+	
+	//새 교사 등록 폼
+	@GetMapping("/new_teacherForm.do")
+	public String new_teacherForm() {
+		return "member/new_teacherForm";
+	}
+	
+	//유아관리
+	@GetMapping("/manage_child.do")
+	public String manage_child() {
+		return "member/manage_child";
+	}
+	
+	//새 유아 등록 폼
+	@GetMapping("/new_childrenForm.do")
+	public String new_children_form() {
+		return "member/new_childrenFrom";
+	}
+	
+	
+	//검사 관리
+	@GetMapping("/manage_testResult.do")
+	public String manage_testResult() {
+		return "member/manage_testResult";
+	}
+	
+	
+	//너처링 포트폴리오
+	@GetMapping("/manage_nurturing.do")
+	public String manage_nurturing() {
+		return "member/manage_nurturing";
+	}
+	
+	
 	
 }

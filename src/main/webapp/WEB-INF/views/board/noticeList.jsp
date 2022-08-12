@@ -1,9 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    <style>
+        .notice-header {
+		    background: url(resources/main/img/notice-header.png);
+		    background-position: 20% 22%;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+
+       
+    </style>
 
     
       <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
@@ -30,7 +42,7 @@
                 <h1 class="mb-5">공지사항</h1>
             </div>
           
-            <table class="table table-hover text-center">
+            <table class="table table-hover text-center align-middle" style="height: 170px;">
                  <thead class="table-light">
                      <tr>
                          <th><input type="checkbox" onclick="selectAll(this)"></th>
@@ -44,7 +56,7 @@
                       <tr>
                          <td><input type="checkbox" name="notice"></td>
                          <td>100</td>
-                         <td>아이킨더 공지사항입니다</td>
+                         <td><a href="noticeDetail.do">아이킨더 공지사항입니다</a></td>
                          <td>관리자</td>
                          <td>2022-07-11</td>
                       </tr>
@@ -57,13 +69,13 @@
                       </tr>
                    </tbody>
              </table> 
-             <div class="d-flex justify-content-between">
-                <button class="btn btn-dark">삭제</button>
-                <a class="btn btn-primary" href="notice_write.html">글쓰기</a>
+             <div class="d-flex justify-content-between mt-5">
+                <button class="btn btn-primary">삭제</button>
+                <a class="btn btn-dark" href="notice_write.do">글쓰기</a>
              </div>   
         </div>
     </div>
-    <div class="row">
+    <div class="mt-5">
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">

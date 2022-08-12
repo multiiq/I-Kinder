@@ -1,68 +1,69 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
+    
+    <!-- summernote css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    
    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
     
-    
-      <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('resources/main/images/banner.jpg');">
-        <div class="container">
-          <div class="row align-items-end justify-content-center text-center">
-            <div class="col-lg-7">
-              <h2 class="mb-0">공지사항</h2>
-              <p>무슨 말을 쓰지.</p>
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 notice-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">공지사항</h1>
+                    <nav aria-label="breadcrumb  ">
+                        <ol class="breadcrumb justify-content-center align-items-end">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">고객지원</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">공지사항</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
-          </div>
-        </div>
-      </div> 
-      
-      <div class="custom-breadcrumns border-bottom">
-       <div class="container">
-        <a href="home.do">Home</a>
-        <span class="mx-3 icon-keyboard_arrow_right"></span>
-        <span class="">공지사항</span>
-        <span class="mx-3 icon-keyboard_arrow_right"></span>
-        <span class="current">공지사항</span>
-      </div>
-     </div>
-     
-     
-     <div class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-12  mb-4">
-              <input type="text" placeholder="제목을 입력해주세요." id="fname" class="form-control form-control-lg">              
-            </div>
-            <div class="col-12">
-              <div id="summernote"></div>
-            </div>
-          </div>
-          <div class="row justify-content-between mt-3">
-            <button class="btn btn-outline-primary btn-lg" id="previousBtn">목록가기</button>
-            <button class="btn btn-primary btn-lg ml-4">등록</button>
-          </div> 
         </div>
     </div>
+    <!-- Header End -->
 
+
+
+    <!-- notice Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                
+                <h1 class="mb-5">공지사항</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-12 col-md-6 " >
+                    <form method="post">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="제목을 입력해주세요">
+                            <label for="name">제목</label>
+                        </div>
+                        <textarea id="summernote" name="editordata"></textarea>
+                      </form>
+                </div>
+                
+                
+                
+            </div>
+            <div class="mt-5 d-flex justify-content-between">
+                <a class="btn btn-outline-secondary px-5  py-3" href="notice.do">취소</a>
+                <button class="btn btn-primary  w-25 ">등록</button>
+            </div>
+        </div>
+    </div>
+    <!-- notice End -->
     
     
-     <script>
-      $('#summernote').summernote({
-        placeholder: '본문을 작성해주세요.',
-        tabsize: 2,
-        height: 500
-      });
-
-      //목록가기 
-      const previousBtn = document.getElementById("previousBtn");
-      const handlePreviousPage=()=>{
-        location.href="notice.do";
-      }
-      previousBtn.addEventListener("click",handlePreviousPage);
-
+    <!-- summernote js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $('#summernote').summernote({
+            height: 600,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true                  // set focus to editable area after initializing summernote
+        });
     </script>

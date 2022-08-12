@@ -55,7 +55,7 @@
                     <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px; color:black">
                     <p style="font-size: 2.5rem;">다중지능, 정서지능, 도덕지능</p>
                     <strong style="font-size: 2.3rem;">계발 놀이중심 통합 교육</strong>
-                    <p class="mt-5" style="font-size: 1.5rem;">가드너가 제시하는 인가의 가치 진선미, (개정) 누리과정이 추구하는 인간상</p>
+                    <p class="mt-5" style="font-size: 1.5rem;">가드너가 제시하는 인간의 가치 진선미, (개정) 누리과정이 추구하는 인간상</p>
                     </div>
                 
                 </div>
@@ -130,7 +130,7 @@
                             <div class="p-4" style="font-size: 1.2rem;">
                                 <img src="resources/main/img/mi.png" class="" style="height: 7rem;">
                                 <dl>
-                                  <dt class="mt-4">다중지능</dt>
+                                  <dt style="margin-top:1.8rem">다중지능</dt>
                                   <dt class="mb-4">(MI)</dt>
                                     <dd class="mb-3">독립된 8개의 다양한 지능 영역을 <br>
                                     통해 인간의 지적 능력을 설명</dd>
@@ -147,7 +147,7 @@
                     <div class="col-lg-4 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="white-box-item text-center pt-3" style="height: 30rem;">
                             <div class="p-4" style="font-size: 1.2rem;">
-                                <img src="resources/main/img/ei.png" class="" style="height: 7rem;">
+                                <img src="resources/main/img/ei.png" class="mb-1" style="height: 7rem;">
                                 <dl>
                                     <dt class="mt-4">정서지능</dt>
                                     <dt class="mb-4">(EI)</dt>
@@ -166,9 +166,9 @@
                     <div class="col-lg-4 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="white-box-item text-center pt-3" style="height: 30rem;">
                             <div class="p-4" style="font-size: 1.2rem;">
-                                <img src="resources/main/img/moi.png" class="" style="height: 8rem;">
+                                <img src="resources/main/img/moi.png" style="height: 8rem;">
                                 <dl>
-                                    <dt class="mt-4">도덕지능</dt>
+                                    <dt style="margin-top:0.8rem">도덕지능</dt>
                                     <dt class="mb-4">(MOI)</dt>
                                       <dd class="mb-3">
                                         <strong>도덕적 판단</strong>을 할 수 있는 마음의 능력
